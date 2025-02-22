@@ -7,7 +7,7 @@ from app.models.statistics import StatisticsModel
 
 @pytest.fixture(scope="function")
 def mongo_connector():
-    mongo_client = MongoClient()  # Simulação do banco usando mongomock
+    mongo_client = MongoClient()  
     db = mongo_client["minibot"]
     return db
 
