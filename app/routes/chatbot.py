@@ -18,3 +18,7 @@ def test_db():
         return {"message": "Conexão com o MongoDB funcionando!", "collections": collections}
     except Exception as e:
         raise HTTPException(status_code=500, detail={"error": f"Erro ao conectar ao MongoDB: {str(e)}"})
+    
+@router.get("/")
+def get_chatbot_response():
+    return {"message": "Resposta"}
